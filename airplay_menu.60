@@ -1,0 +1,31 @@
+
+import { Icon } from "icon.60";
+
+AirPlayMenu := Rectangle {
+	property <brush> element-colors;
+	width: 80px;
+
+	HorizontalLayout { 
+		alignment: end;
+		spacing: 10px;
+
+		Icon { 
+			icon-source: @image-url("icons/100/airplay-audio.svg");
+			element-color: element-colors;
+			y: parent.height / 2 - height / 2;
+			highlight-background: true;
+		}
+		Icon { 
+			icon-source: @image-url("icons/100/music-lyrics.png");
+			element-color: element-colors;
+			y: parent.height / 2 - height / 2;
+			highlight-background: true;
+		}
+		Icon { 
+			icon-source: @image-url("icons/100/bulleted-list.png");
+			element-color: element-colors;
+			y: parent.height / 2 - height / 2;
+			highlight-background: true;
+		}
+	}
+}
