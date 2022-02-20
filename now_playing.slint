@@ -2,6 +2,7 @@
 NowPlaying := Rectangle {
     background: #413E48;
     border-radius: 3px;
+    property <image> source-image;
 
     HorizontalLayout {
         alignment: start;
@@ -12,7 +13,7 @@ NowPlaying := Rectangle {
             border-radius: 5px;
             width: parent.height;
             Image { 
-                source: @image-url("images/cover_art.jpg"); 
+                source: root.source-image; 
                 height: parent.height;
             }	
         }
