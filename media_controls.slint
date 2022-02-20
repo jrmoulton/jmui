@@ -4,44 +4,45 @@ import { Icon } from "icon.slint";
 MediaControls := Rectangle {
 	width: 150px;
 	property <brush> element-colors;
+    property <bool> toggle: false;
 
 	HorizontalLayout { // This is here so that it will fill
 		alignment: center;
 		spacing: 10px;
 
-		Icon { 
+        shuffle := Icon { 
 			element-color: element-colors;
-			icon-source: @image-url("icons/100/shuffle.png"); 
+			icon-source: [@image-url("icons/100/shuffle.png")]; 
 			scale: 85%;
 			y: parent.height / 2 - height / 2;
 			highlight-background: true;
 			highlight-element-color: #EAE9EA;
 			highlight-element: true;
 		}
-		Icon { 
+		rewind :=Icon { 
 			element-color: element-colors;
-			icon-source: @image-url("icons/100/rewind.png"); 
+			icon-source: [@image-url("icons/100/rewind.png")]; 
 			scale: 120%;
 			y: parent.height / 2 - height / 2;
 			highlight-background: true;
 		}
-		Icon { 
+		play-pause := Icon { 
 			element-color: element-colors;
-			icon-source: @image-url("icons/100/play.png"); 
+			icon-source: [@image-url("icons/100/play.png"), @image-url("icons/100/pause.png")]; 
 			scale: 120%;
 			y: parent.height / 2 - height / 2;
 			highlight-background: true;
 		}
-		Icon { 
+        forward := Icon { 
 			element-color: element-colors;
-			icon-source: @image-url("icons/100/fast-forward.png"); 
+			icon-source: [@image-url("icons/100/fast-forward.png")]; 
 			scale: 120%;
 			y: parent.height / 2 - height / 2;
 			highlight-background: true;
 		}
-		Icon { 
+        repeat := Icon { 
 			element-color: element-colors;
-			icon-source: @image-url("icons/100/repeat.png"); 
+			icon-source: [@image-url("icons/100/repeat.png")]; 
 			scale: 75%;
 			y: parent.height / 2 - height / 2;
 			highlight-background: true;
