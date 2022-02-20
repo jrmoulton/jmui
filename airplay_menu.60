@@ -5,6 +5,7 @@ AirPlayMenu := Rectangle {
 	property <brush> element-colors;
 	width: 80px;
 
+
 	HorizontalLayout { 
 		alignment: end;
 		spacing: 10px;
