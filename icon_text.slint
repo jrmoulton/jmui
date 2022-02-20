@@ -2,7 +2,7 @@
 import { Icon } from "icon.slint";
 
 IconText := Rectangle {
-	property <image> icon;	 
+	property <[image]> icons;	 
 	property <string> input;
 	property <percent> scale;
 	property <int> font-weight;
@@ -13,7 +13,7 @@ IconText := Rectangle {
 	height: 15px;
 	
 	Icon { 
-        icon-source: icon;
+        icon-sources: icons;
         y: parent.height / 2 - height / 2;
 		element-color: parent.element-color;
 		// colorize: #C44748;
